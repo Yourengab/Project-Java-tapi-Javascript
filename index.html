@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript PBO Project</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        font-family: inter;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #ebebeb;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        scroll-behavior: smooth;
+      }
+      .container {
+        width: 80%;
+        height: auto;
+        background-color: white;
+        border: 1px solid #cbcbcb;
+      }
+      .container nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+        font-style: italic;
+        width: 100%;
+        height: 80px;
+        border-bottom: 1px solid #cbcbcb;
+      }
+      .container label {
+        color: #3c3c3c;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .container .formContainer {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px;
+      }
+      .container .formContainer select {
+        padding: 10px;
+        width: 40%;
+        height: 45px;
+        border-radius: 7px;
+        border-color: #cbcbcb;
+      }
+      .container .formContainer .dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .container .formContainer .formInput {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .container .formContainer .formInput {
+        margin-top: 35px;
+      }
+      .container .formContainer input {
+        border: 1px solid #cbcbcb;
+        border-radius: 7px;
+        height: 30px;
+        width: 50%;
+        padding: 10px;
+      }
+      .container footer {
+        text-align: center;
+        font-style: italic;
+        width: 100%;
+        line-height: 80px;
+        height: 80px;
+        border-top: 1px solid #cbcbcb;
+        margin-top: 50px;
+      }
+      .container footer button {
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <h2>Javascript School Project</h2>
+        <a href="#footer" class="btn btnScroll">Hitung Transaksi</a>
+      </nav>
+      <div class="formContainer">
+        <div class="dropdown">
+          <label for="barang">Pilih barang</label>
+          <select id="listBarang" style="width: 255px">
+            <option value="Kursi" class="barang">Kursi</option>
+            <option value="1" class="barang">Meja</option>
+            <option value="Kipas" class="barang">Kipas</option>
+            <option value="Lampu" class="barang">Lampu</option>
+            <option value="Sofa" class="barang">Sofa</option>
+          </select>
+        </div>
+        <div class="formInput hargaBrg">
+          <label for="">Harga barang</label>
+          <input type="text" class="inputHrg" placeholder="contoh : 12000" disabled />
+        </div>
+        <div class="formInput jmlhBrg">
+          <label for="">Jumlah barang</label>
+          <input type="text" class="inputJmlh" placeholder="contoh : 9" />
+        </div>
+        <h3 style="margin-top: 35px" class="totalMain">TOTAL BELANJA : <span class="total"></span>Rb</h3>
+        <div class="formInput bayar">
+          <label for="">Jumlah bayar</label>
+          <input type="text" class="inputByr" placeholder="contoh : 100 (Ribu rupiah)" />
+          <h3 style="margin-top: 35px" class="kembalianMain">KEMBALIAN KAMU : <span class="kembalian"></span>Rb</h3>
+        </div>
+      </div>
+      <footer id="footer">
+        <button class="hitungTotal">Hitung Total Belanja</button>
+        <button class="hitungKembali">Hitung Kembalian</button>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
